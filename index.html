@@ -5,422 +5,7 @@
   <title>M&P Health Solutions | Healthcare Strategy & Transformation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="M&P Health Solutions is a physician-led healthcare consulting firm helping health systems, payers, and health tech companies move from vision to execution." />
-  <style>
-    :root {
-      --primary: #0b4c5a;        /* dark teal from logo */
-      --primary-light: #e3f3f6;  /* soft teal background */
-      --accent: #f28a23;         /* orange from logo */
-      --dark: #102a33;
-      --text: #243b3f;
-      --muted: #71808c;
-      --bg: #f5f7f8;
-      --white: #ffffff;
-      --radius-lg: 14px;
-      --radius-md: 10px;
-      --shadow-soft: 0 14px 40px rgba(11, 76, 90, 0.16);
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--text);
-      background: radial-gradient(circle at top left, #e2f0f4 0, #f5f7f8 45%, #f5f7f8 100%);
-    }
-
-    a { color: inherit; text-decoration: none; }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      backdrop-filter: blur(10px);
-      background: rgba(245, 247, 248, 0.9);
-      border-bottom: 1px solid rgba(190, 210, 220, 0.7);
-    }
-
-    .nav {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 14px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 700;
-      color: var(--dark);
-      letter-spacing: 0.03em;
-    }
-
-    .logo img {
-      height: 36px;
-      width: auto;
-      display: block;
-    }
-
-    .logo-subtitle {
-      font-size: 11px;
-      color: var(--muted);
-      font-weight: 400;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    .nav-links a:hover { color: var(--primary); }
-
-    .nav-cta {
-      padding: 8px 18px;
-      border-radius: 999px;
-      border: 1px solid rgba(11, 76, 90, 0.2);
-      font-size: 13px;
-      font-weight: 600;
-      background: linear-gradient(135deg, var(--primary), #0d6276);
-      color: white !important;
-      box-shadow: 0 8px 18px rgba(11, 76, 90, 0.35);
-    }
-
-    main {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 40px 20px 72px;
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2.8fr);
-      gap: 40px;
-      align-items: center;
-      margin-top: 16px;
-    }
-
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 12px;
-      border-radius: 999px;
-      background: rgba(11, 76, 90, 0.06);
-      color: var(--primary);
-      font-size: 12px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 14px;
-    }
-
-    .pill-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: #21c281;
-      box-shadow: 0 0 0 6px rgba(33, 194, 129, 0.25);
-    }
-
-    h1 {
-      font-size: clamp(2.1rem, 3vw + 1rem, 3rem);
-      line-height: 1.05;
-      letter-spacing: -0.04em;
-      margin: 0 0 14px;
-      color: var(--dark);
-    }
-
-    h1 span.highlight { color: var(--primary); }
-
-    .hero-subtitle {
-      font-size: 15px;
-      line-height: 1.6;
-      color: var(--muted);
-      max-width: 520px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin: 22px 0 16px;
-    }
-
-    .btn-primary {
-      padding: 11px 22px;
-      
-border-radius: 999px;
-      border: none;
-      background: linear-gradient(135deg, var(--primary), #0d6276);
-      color: #fff;
-      font-weight: 600;
-      font-size: 14px;
-      cursor: pointer;
-      box-shadow: 0 12px 30px rgba(11, 76, 90, 0.45);
-    }
-
-    .btn-primary:hover {
-      box-shadow: 0 14px 34px rgba(11, 76, 90, 0.58);
-      transform: translateY(-1px);
-    }
-
-    .btn-secondary {
-      padding: 10px 20px;
-      border-radius: 999px;
-      border: 1px solid rgba(113, 128, 140, 0.5);
-      background: rgba(255, 255, 255, 0.9);
-      color: var(--text);
-      font-weight: 500;
-      font-size: 14px;
-      cursor: pointer;
-    }
-
-    .hero-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      font-size: 12px;
-      color: var(--muted);
-      margin-top: 6px;
-    }
-
-    .hero-card {
-      background: radial-gradient(circle at top right, #fff6ef 0, #ffffff 50%, #e4f3f6 100%);
-      border-radius: 22px;
-      padding: 22px 20px 18px;
-      box-shadow: var(--shadow-soft);
-      border: 1px solid rgba(190, 210, 220, 0.8);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-card-badge {
-      position: absolute;
-      top: 16px;
-      right: 16px;
-      padding: 5px 11px;
-      border-radius: 999px;
-      background: rgba(11, 76, 90, 0.08);
-      color: var(--primary);
-      font-size: 11px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .hero-card-title {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--dark);
-      margin-bottom: 4px;
-    }
-
-    .hero-card-subtitle {
-      font-size: 12px;
-      color: var(--muted);
-      margin-bottom: 16px;
-    }
-
-    .metric-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-      margin-bottom: 16px;
-    }
-
-    .metric {
-      border-radius: var(--radius-md);
-      background: rgba(255, 255, 255, 0.98);
-      padding: 10px;
-      border: 1px solid rgba(190, 210, 220, 0.8);
-    }
-
-    .metric-label {
-      font-size: 11px;
-      color: var(--muted);
-      margin-bottom: 4px;
-    }
-
-    .metric-value {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--dark);
-    }
-
-    section { margin-top: 56px; }
-
-    .section-label {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--muted);
-      margin-bottom: 8px;
-    }
-
-    h2 {
-      margin: 0 0 10px;
-      font-size: 1.6rem;
-      color: var(--dark);
-      letter-spacing: -0.03em;
-    }
-
-    p {
-      font-size: 14px;
-      line-height: 1.7;
-      color: var(--muted);
-      margin: 0 0 8px;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 16px;
-    }
-
-    .card {
-      background: rgba(255, 255, 255, 0.98);
-      border-radius: 16px;
-      padding: 16px 16px 14px;
-      border: 1px solid rgba(190, 210, 220, 0.9);
-      box-shadow: 0 10px 30px rgba(11, 76, 90, 0.08);
-    }
-
-    .card-icon {
-      width: 32px;
-      height: 32px;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(11, 76, 90, 0.08);
-      color: var(--primary);
-      font-size: 16px;
-      margin-bottom: 10px;
-    }
-
-    .card h3 {
-      margin: 0 0 6px;
-      font-size: 15px;
-      color: var(--dark);
-    }
-
-    .card p { margin-bottom: 6px; }
-
-    .card ul {
-      margin: 8px 0 0;
-      padding-left: 18px;
-      list-style: disc;
-    }
-
-    .card li {
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 3px;
-    }
-
-    .two-col {
-      display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
-      gap: 32px;
-      align-items: flex-start;
-    }
-
-    .tag-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 10px;
-    }
-
-    .tag {
-      padding: 4px 10px;
-      border-radius: 999px;
-
-border: 1px solid rgba(190, 210, 220, 0.9);
-      font-size: 11px;
-      color: var(--muted);
-      background: rgba(255, 255, 255, 0.96);
-    }
-
-    .contact {
-      background: linear-gradient(135deg, var(--primary), #0d6276);
-      border-radius: var(--radius-lg);
-      padding: 22px 20px 18px;
-      color: #fff;
-      box-shadow: var(--shadow-soft);
-      display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2.3fr);
-      gap: 18px;
-      align-items: center;
-      margin-top: 24px;
-    }
-
-    .contact h3 {
-      margin: 0 0 6px;
-      font-size: 1.25rem;
-      letter-spacing: -0.02em;
-    }
-
-    .contact p {
-      margin: 0;
-      color: rgba(233, 244, 247, 0.95);
-    }
-
-    .contact-methods { font-size: 13px; }
-
-    .contact-methods div { margin-bottom: 4px; }
-
-    .contact-methods a {
-      color: #fff;
-      text-decoration: underline;
-      text-decoration-thickness: 1px;
-      text-underline-offset: 3px;
-    }
-
-    .contact-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 4px 9px;
-      border-radius: 999px;
-      background: rgba(4, 26, 34, 0.32);
-      font-size: 11px;
-      margin-bottom: 6px;
-    }
-
-    footer {
-      border-top: 1px solid rgba(190, 210, 220, 0.8);
-      padding: 16px 20px 26px;
-      font-size: 11px;
-      color: var(--muted);
-      text-align: center;
-      background: rgba(245, 247, 248, 0.9);
-    }
-
-    footer a { color: var(--primary); }
-
-    @media (max-width: 880px) {
-      .hero { grid-template-columns: minmax(0, 1fr); }
-      .hero-card { order: -1; }
-      .two-col { grid-template-columns: minmax(0, 1fr); }
-      .grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .contact { grid-template-columns: minmax(0, 1fr); }
-    }
-
-    @media (max-width: 640px) {
-      .nav { padding-inline: 14px; }
-      main { padding-inline: 14px; }
-      .nav-links { display: none; }
-      .grid-3 { grid-template-columns: minmax(0, 1fr); }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
@@ -475,7 +60,6 @@ border: 1px solid rgba(190, 210, 220, 0.9);
         <div class="hero-card-subtitle">
           We blend board-level strategy with on-the-ground implementation support.
         </div>
-
         <div class="metric-grid">
           <div class="metric">
             <div class="metric-label">Core focus</div>
@@ -497,7 +81,7 @@ border: 1px solid rgba(190, 210, 220, 0.9);
       </p>
       <div class="grid-3">
         <div class="card">
-          <div class="card-icon">📈</div>
+        <div class="card-icon">📈</div>
           <h3>Strategy &amp; Operating Model</h3>
           <p>Align vision, governance, and incentives across teams.</p>
           <ul>
@@ -584,7 +168,7 @@ border: 1px solid rgba(190, 210, 220, 0.9);
     <section id="impact">
       <div class="two-col">
         <div>
-<div class="section-label">Impact</div>
+          <div class="section-label">Impact</div>
           <h2>Designed for measurable outcomes.</h2>
           <p>
             We focus on a small number of initiatives that matter most to your organization and build
@@ -600,7 +184,7 @@ border: 1px solid rgba(190, 210, 220, 0.9);
           <div class="card">
             <h3 style="margin-bottom:4px;">Examples of outcomes</h3>
             <ul>
-              <li>Enterprise transformation roadmap delivered in 12 weeks</li>
+          <li>Enterprise transformation roadmap delivered in 12 weeks</li>
               <li>Accelerated go-live of key digital programs</li>
               <li>Improved engagement across clinical and operational teams</li>
             </ul>
@@ -626,7 +210,7 @@ border: 1px solid rgba(190, 210, 220, 0.9);
           <p>We typically respond within 2 business days.</p>
         </div>
         <div class="contact-methods">
-          <div><strong>Email:</strong> <a href="mailto:apai@mphealthsolutions.com">apai@mphealthsolutions.com</a></div>
+          <div><strong>Email:</strong> <a href="mailto:ajitbpaimd@gmail.com">ajitbpaimd@gmail.com</a></div>
           <div><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/company/mp-health-solutions/" target="_blank" rel="noopener">M&P Health Solutions on LinkedIn</a></div>
           <div><strong>Location:</strong> US-based, serving clients nationwide.</div>
         </div>
@@ -642,4 +226,4 @@ border: 1px solid rgba(190, 210, 220, 0.9);
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
-</html>        
+</html>
