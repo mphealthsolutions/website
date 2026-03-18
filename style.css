@@ -1,9 +1,16 @@
 :root {
   --text: #111111;
   --muted: #666666;
-  --line: #dddddd;
+  --line: #d7e4f1;
   --bg: #f8f8f6;
   --card: #ffffff;
+  --blue: #0270c2;
+  --blue-2: #006fc3;
+  --light-orange: #ffa00b;
+  --dark-orange: #ff8200;
+  --dark-orange-2: #ff7e0a;
+  --dark-blue: #013e86;
+  --white: #ffffff;
 }
 
 * {
@@ -18,7 +25,7 @@ body {
   margin: 0;
   font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
   color: var(--text);
-  background: var(--bg);
+  background: linear-gradient(180deg, #f8fbff 0%, var(--bg) 220px);
   line-height: 1.5;
 }
 
@@ -41,11 +48,12 @@ a {
   top: 0;
   z-index: 20;
   border-bottom: 1px solid var(--line);
-  background: color-mix(in srgb, var(--bg), white 40%);
+  background: var(--white);
+  background: color-mix(in srgb, var(--bg), var(--white) 40%);
 }
 
 .nav {
-  min-height: 72px;
+  min-height: 120px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -63,8 +71,9 @@ a {
 }
 
 .brand img {
-  width: 34px;
-  height: 34px;
+  width: 183px;
+  height: 100px;
+  object-fit: contain;
 }
 
 nav {
@@ -75,11 +84,11 @@ nav {
 nav a {
   text-decoration: none;
   font-size: 0.9rem;
-  color: var(--muted);
+  color: var(--dark-blue);
 }
 
 nav a:hover {
-  color: var(--text);
+  color: var(--blue);
 }
 
 .hero {
@@ -92,7 +101,7 @@ nav a:hover {
   text-transform: uppercase;
   letter-spacing: 0.14em;
   font-size: 0.72rem;
-  color: var(--muted);
+  color: var(--dark-blue);
 }
 
 h1,
@@ -129,21 +138,25 @@ h1 {
   justify-content: center;
   padding: 0.7rem 1.2rem;
   border-radius: 999px;
-  border: 1px solid #222;
-  background: #161616;
-  color: #fff;
+  border: 1px solid var(--dark-orange-2);
+  background: linear-gradient(135deg, var(--light-orange), var(--dark-orange));
+  color: var(--white);
   font-size: 0.9rem;
   text-decoration: none;
+}
+
+.button:hover {
+  background: linear-gradient(135deg, var(--dark-orange), var(--dark-orange-2));
 }
 
 .text-link {
   text-decoration: none;
-  color: var(--muted);
+  color: var(--blue-2);
   font-size: 0.9rem;
 }
 
 .text-link:hover {
-  color: var(--text);
+  color: var(--dark-blue);
 }
 
 .section {
@@ -174,7 +187,7 @@ p {
 
 .service-grid article {
   background: var(--card);
-  border: 1px solid var(--line);
+  border: 1px solid #d3e3f3;
   padding: 1.2rem;
 }
 
@@ -213,6 +226,14 @@ ol li {
   color: var(--muted);
 }
 
+.contact a {
+  color: var(--blue);
+}
+
+.contact a:hover {
+  color: var(--dark-blue);
+}
+
 footer {
   padding-block: 1.5rem;
 }
@@ -236,5 +257,14 @@ footer {
 
   nav {
     display: none;
+  }
+
+  .nav {
+    min-height: 100px;
+  }
+
+  .brand img {
+    width: 146px;
+    height: 80px;
   }
 }
