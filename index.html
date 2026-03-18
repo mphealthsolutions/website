@@ -2,228 +2,115 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>M&P Health Solutions | Healthcare Strategy & Transformation</title>
+  <title>M&amp;P Health Solutions | Healthcare Strategy &amp; Transformation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="M&P Health Solutions is a physician-led healthcare consulting firm helping health systems, payers, and health tech companies move from vision to execution." />
+  <meta
+    name="description"
+    content="M&amp;P Health Solutions is a physician-led healthcare consulting firm helping health systems, payers, and health tech companies move from strategy to execution."
+  />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <div class="nav">
-      <div class="logo">
-        <!-- Replace src with your actual logo file path -->
-        <img src="logo-mp-health.png" alt="M&P Health Solutions logo" />
-        <div>
-          <div>M&P Health Solutions</div>
-          <div class="logo-subtitle">Innovation. Strategy. Transformation.</div>
-        </div>
-      </div>
-      <div class="nav-links">
-        <a href="#solutions">Solutions</a>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="M&amp;P Health Solutions home">
+        <img src="logo-mp-health.png" alt="M&amp;P Health Solutions logo" />
+        <span>M&amp;P Health Solutions</span>
+      </a>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#approach">Approach</a>
         <a href="#about">About</a>
-        <a href="#impact">Impact</a>
-        <a href="#contact" class="nav-cta">Book a strategy call</a>
-      </div>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div>
-        <div class="pill">
-          <div class="pill-dot"></div>
-          Physician-led healthcare consulting
-        </div>
-        <h1>
-          Strategy, innovation, and <span class="highlight">transformation for modern healthcare.</span>
-        </h1>
-        <p class="hero-subtitle">
-          M&P Health Solutions partners with health systems, payers, and health tech companies to design and deliver
-          digital and AI-enabled change that sticks.
-        </p>
-        <div class="hero-actions">
-          <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
-            Schedule an introductory call
-          </button>
-          <button class="btn-secondary" onclick="document.getElementById('solutions').scrollIntoView({behavior:'smooth'})">
-            View solutions
-          </button>
-        </div>
-        <div class="hero-meta">
-          <span>Strategy · Operating model · Transformation office</span>
-        </div>
+  <main id="top">
+    <section class="hero wrap">
+      <p class="kicker">Physician-led healthcare consulting</p>
+      <h1>Modern strategy for complex health systems.</h1>
+      <p class="lead">
+        We help health systems, payers, and health tech organizations define clear priorities and
+        deliver measurable transformation.
+      </p>
+      <div class="hero-actions">
+        <a class="button" href="#contact">Book a strategy call</a>
+        <a class="text-link" href="#services">Explore services</a>
       </div>
-
-      <aside class="hero-card">
-        <div class="hero-card-badge">Clinical · Strategic · Digital</div>
-        <div class="hero-card-title">From vision decks to execution.</div>
-        <div class="hero-card-subtitle">
-          We blend board-level strategy with on-the-ground implementation support.
-        </div>
-        <div class="metric-grid">
-          <div class="metric">
-            <div class="metric-label">Core focus</div>
-            <div class="metric-value">Strategy · Digital · AI</div>
-          </div>
-          <div class="metric">
-            <div class="metric-label">Who we work with</div>
-            <div class="metric-value">Health systems · Payers · Health tech</div>
-          </div>
-        </div>
-      </aside>
     </section>
 
-    <section id="solutions">
-      <div class="section-label">Solutions</div>
-      <h2>From strategy design to delivery.</h2>
-      <p>
-        A focused set of services to move your organization from ideas to measurable results.
-      </p>
-      <div class="grid-3">
-        <div class="card">
-        <div class="card-icon">📈</div>
+    <section id="services" class="wrap section">
+      <div class="section-heading">
+        <p class="kicker">Services</p>
+        <h2>Focused support where outcomes matter most.</h2>
+      </div>
+      <div class="service-grid">
+        <article>
           <h3>Strategy &amp; Operating Model</h3>
-          <p>Align vision, governance, and incentives across teams.</p>
-          <ul>
-            <li>Enterprise &amp; service line strategy</li>
-            <li>Operating model &amp; governance</li>
-            <li>Roadmaps rooted in execution</li>
-          </ul>
-        </div>
-        <div class="card">
-          <div class="card-icon">💻</div>
-          <h3>Digital &amp; Data Enablement</h3>
-          <p>Prioritize and launch digital initiatives that get adopted.</p>
-          <ul>
-            <li>Digital front door &amp; virtual care</li>
-            <li>Data &amp; AI use case design</li>
-            <li>Workflow and change support</li>
-          </ul>
-        </div>
-        <div class="card">
-          <div class="card-icon">🧭</div>
+          <p>Translate enterprise vision into practical roadmaps, governance, and accountability.</p>
+        </article>
+        <article>
+          <h3>Digital &amp; AI Enablement</h3>
+          <p>Prioritize high-impact use cases and drive adoption across clinical and operational teams.</p>
+        </article>
+        <article>
           <h3>Transformation Office</h3>
-          <p>Stand up a transformation or PMO function that drives outcomes.</p>
-          <ul>
-            <li>Portfolio &amp; value tracking</li>
-            <li>Program structure &amp; cadence</li>
-            <li>Leadership and stakeholder engagement</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="grid-3" style="margin-top: 18px;">
-        <div class="card">
-          <div class="card-icon">🏥</div>
-          <h3>Clinical &amp; Care Model Design</h3>
-          <p>Translate strategy into sustainable, team-based care models.</p>
-          <ul>
-            <li>Care model and pathway design</li>
-            <li>Interdisciplinary team models</li>
-            <li>Integration with digital tools</li>
-          </ul>
-        </div>
-        <div class="card">
-          <div class="card-icon">📊</div>
-          <h3>Performance &amp; Value</h3>
-          <p>Measure what matters and improve outcomes over time.</p>
-          <ul>
-            <li>Value-based care support</li>
-            <li>Quality and performance dashboards</li>
-            <li>Continuous improvement routines</li>
-          </ul>
-        </div>
-        <div class="card">
-          <div class="card-icon">🤝</div>
-          <h3>Advisory Partnerships</h3>
-          <p>Partner with leaders navigating complex change.</p>
-          <ul>
-            <li>Executive advisory</li>
-            <li>Deal and partnership support</li>
-            <li>Product &amp; go-to-market input for health tech</li>
-          </ul>
-        </div>
+          <p>Build the cadence, PMO structure, and value tracking needed to sustain change.</p>
+        </article>
+        <article>
+          <h3>Clinical Model Design</h3>
+          <p>Design care models and pathways that align teams, data, and technology.</p>
+        </article>
       </div>
     </section>
 
-    <section id="about">
-      <div class="section-label">About</div>
-      <h2>Healthcare-first, execution-focused.</h2>
-      <p>
-        M&P Health Solutions is a physician-led healthcare consulting firm. We bring experience
-        from health systems, payers, and health tech — combining clinical insight, operating expertise,
-        and digital know-how.
-      </p>
-      <p>
-        Our work is pragmatic: clear priorities, simple governance, and support for the teams who
-        deliver change every day.
-      </p>
-      <div class="tag-row">
-        <span class="tag">Physician-led</span>
-        <span class="tag">Strategy to execution</span>
-        <span class="tag">Digital &amp; AI fluency</span>
+    <section id="approach" class="wrap section split">
+      <div>
+        <p class="kicker">Approach</p>
+        <h2>Simple structure. Serious execution.</h2>
       </div>
+      <ol>
+        <li><strong>Diagnose:</strong> Clarify priorities and current-state constraints.</li>
+        <li><strong>Design:</strong> Build a focused strategy with practical sequencing.</li>
+        <li><strong>Deliver:</strong> Stand up teams, routines, and metrics that hold.</li>
+      </ol>
     </section>
 
-    <section id="impact">
-      <div class="two-col">
-        <div>
-          <div class="section-label">Impact</div>
-          <h2>Designed for measurable outcomes.</h2>
-          <p>
-            We focus on a small number of initiatives that matter most to your organization and build
-            the structures needed to sustain them.
-          </p>
-          <div class="tag-row">
-            <span class="tag">Faster execution</span>
-            <span class="tag">Clear accountability</span>
-            <span class="tag">Better clinician experience</span>
-          </div>
-        </div>
-        <div>
-          <div class="card">
-            <h3 style="margin-bottom:4px;">Examples of outcomes</h3>
-            <ul>
-          <li>Enterprise transformation roadmap delivered in 12 weeks</li>
-              <li>Accelerated go-live of key digital programs</li>
-              <li>Improved engagement across clinical and operational teams</li>
-            </ul>
-          </div>
-        </div>
+    <section id="about" class="wrap section">
+      <div class="section-heading">
+        <p class="kicker">About</p>
+        <h2>Healthcare-first perspective with execution depth.</h2>
       </div>
+      <p>
+        M&amp;P Health Solutions combines clinical leadership, operating expertise, and digital fluency
+        to move organizations from planning to implementation.
+      </p>
     </section>
 
-    <section id="contact">
-      <div class="section-label">Contact</div>
-      <h2>Let’s talk.</h2>
-      <p>
-        Share a bit about your organization and priorities, and we’ll follow up with next steps and
-        available times.
-      </p>
-
-      <div class="contact">
-        <div>
-          <div class="contact-pill">
-            <span>Start a conversation</span>
-          </div>
-          <h3>Book a strategy discussion.</h3>
-          <p>We typically respond within 2 business days.</p>
-        </div>
-        <div class="contact-methods">
-          <div><strong>Email:</strong> <a href="mailto:info@mphealthsolutions.com">info@mphealthsolutions.com</a></div>
-          <div><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/company/mp-health-solutions/" target="_blank" rel="noopener">M&P Health Solutions on LinkedIn</a></div>
-          <div><strong>Location:</strong> US-based, serving clients nationwide.</div>
-        </div>
-      </div>
+    <section id="contact" class="wrap section contact">
+      <p class="kicker">Contact</p>
+      <h2>Start the conversation.</h2>
+      <p>Share your priorities and we will follow up within 2 business days.</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:info@mphealthsolutions.com">info@mphealthsolutions.com</a></li>
+        <li>
+          <strong>LinkedIn:</strong>
+          <a href="https://www.linkedin.com/company/mp-health-solutions/" target="_blank" rel="noopener">M&amp;P Health Solutions</a>
+        </li>
+        <li><strong>Location:</strong> US-based, serving clients nationwide.</li>
+      </ul>
     </section>
   </main>
 
   <footer>
-    © <span id="year"></span> M&P Health Solutions. All rights reserved.
+    <div class="wrap footer-inner">
+      <p>© <span id="year"></span> M&amp;P Health Solutions. All rights reserved.</p>
+    </div>
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
