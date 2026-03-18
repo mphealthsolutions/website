@@ -48,6 +48,7 @@ a {
   top: 0;
   z-index: 20;
   border-bottom: 1px solid var(--line);
+  background: var(--white);
   background: color-mix(in srgb, var(--white), #eaf4ff 20%);
 }
 
