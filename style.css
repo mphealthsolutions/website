@@ -11,6 +11,8 @@
   --dark-orange-2: #ff7e0a;
   --dark-blue: #013e86;
   --white: #ffffff;
+  --green: #0F6E56;
+  --green-light: #e6f4ee;
 }
 
 * {
@@ -142,6 +144,8 @@ h1 {
   color: var(--white);
   font-size: 0.9rem;
   text-decoration: none;
+  cursor: pointer;
+  font-family: inherit;
 }
 
 .button:hover {
@@ -215,21 +219,141 @@ ol li {
   color: var(--muted);
 }
 
-.contact ul {
-  margin: 1rem 0 0;
+/* Contact section */
+.contact-lead {
+  margin-top: 0.5rem;
+}
+
+#contact-form-wrap {
+  margin-top: 2rem;
+}
+
+#contact-form {
+  max-width: 640px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.01em;
+}
+
+.req {
+  color: var(--green);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: var(--text);
+  background: var(--white);
+  transition: border-color 0.15s;
+  width: 100%;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(15, 110, 86, 0.1);
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-submit {
+  margin-top: 0.5rem;
+}
+
+.form-privacy {
+  margin-top: 0.75rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.contact-thanks {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  max-width: 480px;
+  padding: 2rem;
+  background: var(--green-light);
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.thanks-icon {
+  width: 48px;
+  height: 48px;
+}
+
+.contact-thanks h3 {
+  font-size: 1.15rem;
+  color: var(--text);
+  margin: 0;
+}
+
+.contact-thanks p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.contact-alt {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+}
+
+.contact-alt p {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+.contact ul,
+.contact-alt ul {
+  margin: 0.5rem 0 0;
   padding-left: 1rem;
 }
 
-.contact li {
+.contact li,
+.contact-alt li {
   margin-bottom: 0.5rem;
   color: var(--muted);
 }
 
-.contact a {
+.contact a,
+.contact-alt a {
   color: var(--blue);
 }
 
-.contact a:hover {
+.contact a:hover,
+.contact-alt a:hover {
   color: var(--dark-blue);
 }
 
@@ -265,5 +389,9 @@ footer {
   .brand img {
     width: 146px;
     height: 80px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
   }
 }

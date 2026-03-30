@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>M&amp;P Health Solutions | Healthcare Strategy &amp; Transformation</title>
+  <title>M&P Health Solutions | Healthcare Strategy &amp; Transformation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
@@ -85,14 +85,14 @@
       <p>
         M&amp;P Health Solutions combines clinical leadership, operating expertise, and digital fluency
         to move organizations from planning to implementation. We bring over 30 years of healthcare experience
-        and 15+ years of leading transformation across the nation's largest integrated healthcare system, 
-        designing scalable, data-driven solutions, and driving cross-functional performance improvement. 
-        We're experienced in multibillion-dollar federal health programs, modernizing care delivery through 
-        technology and outcomes-based strategies, and implementing scalable solutions that improve access, 
-        satisfaction, and efficiency. We're strategic advisors to senior stakeholders, government leaders, 
-        and cross-sector partners, with deep expertise in program design, stakeholder engagement, and health 
-        system optimization. 
-        
+        and 15+ years of leading transformation across the nation's largest integrated healthcare system,
+        designing scalable, data-driven solutions, and driving cross-functional performance improvement.
+        We're experienced in multibillion-dollar federal health programs, modernizing care delivery through
+        technology and outcomes-based strategies, and implementing scalable solutions that improve access,
+        satisfaction, and efficiency. We're strategic advisors to senior stakeholders, government leaders,
+        and cross-sector partners, with deep expertise in program design, stakeholder engagement, and health
+        system optimization.
+
         We're solution builders, innovation advisors, and cross-team orchestrators.
       </p>
     </section>
@@ -100,26 +100,122 @@
     <section id="contact" class="wrap section contact">
       <p class="kicker">Contact</p>
       <h2>Start the conversation.</h2>
-      <p>Share your priorities and we will follow up within 2 business days.</p>
-      <ul>
-        <li><strong>Email:</strong> <a href="mailto:info@mphealthsolutions.com">info@mphealthsolutions.com</a></li>
-        <li>
-          <strong>LinkedIn:</strong>
-          <a href="https://www.linkedin.com/company/mp-health-solutions/" target="_blank" rel="noopener">M&amp;P Health Solutions</a>
-        </li>
-        <li><strong>Location:</strong> US-based, serving clients nationwide.</li>
-      </ul>
+      <p class="contact-lead">Share your priorities and we will follow up within 2 business days.</p>
+
+      <div id="contact-form-wrap">
+        <form id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cf-name">Full name <span class="req">*</span></label>
+              <input type="text" id="cf-name" name="name" placeholder="Jane Smith" required />
+            </div>
+            <div class="form-group">
+              <label for="cf-email">Email address <span class="req">*</span></label>
+              <input type="email" id="cf-email" name="email" placeholder="jane@organization.org" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cf-org">Organization</label>
+              <input type="text" id="cf-org" name="organization" placeholder="Health system or company" />
+            </div>
+            <div class="form-group">
+              <label for="cf-title">Title / Role</label>
+              <input type="text" id="cf-title" name="title" placeholder="e.g. Chief Medical Officer" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cf-need">What are you working on? <span class="req">*</span></label>
+            <select id="cf-need" name="focus_area" required>
+              <option value="" disabled selected>Select a focus area</option>
+              <option value="strategy">Strategy &amp; operating model</option>
+              <option value="ai">Digital &amp; AI enablement</option>
+              <option value="transformation">Transformation office / PMO</option>
+              <option value="clinical">Clinical model design</option>
+              <option value="other">Other / not sure yet</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="cf-time">Preferred time to connect</label>
+            <select id="cf-time" name="preferred_time">
+              <option value="" disabled selected>Select a preference</option>
+              <option value="morning">Morning (9am &ndash; 12pm ET)</option>
+              <option value="afternoon">Afternoon (12pm &ndash; 4pm ET)</option>
+              <option value="flexible">Flexible</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="cf-message">Anything else you'd like us to know?</label>
+            <textarea id="cf-message" name="message" placeholder="Describe your challenge or goals in a few sentences&#8230;"></textarea>
+          </div>
+          <button type="submit" class="button form-submit">Send message</button>
+          <p class="form-privacy">Your information is kept confidential and never shared with third parties.</p>
+        </form>
+
+        <div id="contact-thanks" class="contact-thanks" aria-live="polite">
+          <svg class="thanks-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="24" cy="24" r="24" fill="#e6f4ee"/>
+            <path d="M14 25l7 7 13-14" stroke="#0F6E56" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h3>Message received</h3>
+          <p>Thanks for reaching out. Someone from M&amp;P Health Solutions will be in touch within 2 business days.</p>
+        </div>
+      </div>
+
+      <div class="contact-alt">
+        <p>Prefer to reach us directly?</p>
+        <ul>
+          <li><strong>Email:</strong> <a href="mailto:info@mphealthsolutions.com">info@mphealthsolutions.com</a></li>
+          <li>
+            <strong>LinkedIn:</strong>
+            <a href="https://www.linkedin.com/company/mp-health-solutions/" target="_blank" rel="noopener">M&amp;P Health Solutions</a>
+          </li>
+          <li><strong>Location:</strong> US-based, serving clients nationwide.</li>
+        </ul>
+      </div>
     </section>
   </main>
 
   <footer>
     <div class="wrap footer-inner">
-      <p>© <span id="year"></span> M&amp;P Health Solutions. All rights reserved.</p>
+      <p>&copy; <span id="year"></span> M&amp;P Health Solutions. All rights reserved.</p>
     </div>
   </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    var form = document.getElementById('contact-form');
+    var thanks = document.getElementById('contact-thanks');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      var name = document.getElementById('cf-name').value.trim();
+      var email = document.getElementById('cf-email').value.trim();
+      var need = document.getElementById('cf-need').value;
+
+      if (!name || !email || !need) {
+        alert('Please fill in your name, email, and area of focus.');
+        return;
+      }
+
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+
+      // TODO: Replace this block with your backend POST call, e.g.:
+      // fetch('/api/contact', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify({ name, email, organization, title, focus_area, preferred_time, message })
+      // });
+
+      form.style.display = 'none';
+      thanks.style.display = 'flex';
+    });
   </script>
 </body>
 </html>
