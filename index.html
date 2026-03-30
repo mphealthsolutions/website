@@ -187,6 +187,7 @@
 
     var form = document.getElementById('contact-form');
     var thanks = document.getElementById('contact-thanks');
+    var submitBtn = form.querySelector('button[type="submit"]');
 
     form.addEventListener('submit', function(e) {
       e.preventDefault();
@@ -206,15 +207,39 @@
         return;
       }
 
-      // TODO: Replace this block with your backend POST call, e.g.:
-      // fetch('/api/contact', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify({ name, email, organization, title, focus_area, preferred_time, message })
-      // });
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending\u2026';
 
-      form.style.display = 'none';
-      thanks.style.display = 'flex';
+      var data = {
+        name: name,
+        email: email,
+        organization: document.getElementById('cf-org').value.trim(),
+        title: document.getElementById('cf-title').value.trim(),
+        focus_area: need,
+        preferred_time: document.getElementById('cf-time').value,
+        message: document.getElementById('cf-message').value.trim()
+      };
+
+      fetch('https://formspree.io/f/xkoprzbe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data)
+      })
+      .then(function(res) {
+        if (res.ok) {
+          form.style.display = 'none';
+          thanks.style.display = 'flex';
+        } else {
+          return res.json().then(function(body) {
+            throw new Error(body.error || 'Submission failed');
+          });
+        }
+      })
+      .catch(function(err) {
+        alert('Something went wrong. Please try again or email us directly at info@mphealthsolutions.com.');
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send message';
+      });
     });
   </script>
 </body>
